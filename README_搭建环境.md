@@ -2,7 +2,7 @@
     1). 生成package.json
         yarn init -y
 
-    2). 创建入口js: src/index
+    2). 创建入口js: src/index.js
         console.log('Hello Webpack!')
         document.getElementById('root').innerHTML = '<h1>Hello222</h1>'
 
@@ -11,6 +11,7 @@
 
 ## 2. webpack基本使用
     1). 下载依赖包
+        yarn add -D webpack webpack-cli
         yarn add -D html-webpack-plugin
 
     2). 创建webpack配置: webpack.config.js
@@ -159,3 +160,12 @@
         src/App.vue
         src/index.js
         
+## 区分使用生产环境与开发环境
+    使用生产环境:
+        npm run build   ==> webpack
+        1). 在内存中进行编译打包, 生成内存中的打包文件
+        2). 保存到本地(在本地生成打包文件)   ===> 此时还不能通过浏览器来访问, 需要启动服务器运行
+    使用开发环境
+        npm run dev   ==> webpack-dev-server
+        1). 在内存中进行编译打包, 生成内存中的打包文件
+        2). 调动服务器, 运行内存中的打包文件   ===> 可以通过浏览器虚拟路径访问
