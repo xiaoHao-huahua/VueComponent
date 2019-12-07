@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const VueLoaderPlugin = require("vue-loader/lib/plugin");
 module.exports = {
   // 模式: 生产环境
-  mode: "production",
+  mode: "development",
   // 入口
   entry: {
     app: path.resolve(__dirname, "src/index.js")
@@ -61,8 +61,8 @@ module.exports = {
   resolve: {
     extensions: [".js", ".vue", ".json"], // 可以省略的后缀名
     alias: {
-      // 路径别名(简写方式)
-      vue$: "vue/dist/vue.esm.js" // 表示精准匹配
+      // 模块路径别名(简写方式)
+      vue$: "vue/dist/vue.esm.js" ,// 表示精准匹配
     }
   }
 };
