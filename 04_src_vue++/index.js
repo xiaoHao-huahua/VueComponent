@@ -1,11 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router/index.js'
+import Vuex from 'Vuex'
 
+
+Vue.use(Vuex)
 new Vue({
   components:{
     App
   },
   template:'<App/>',
-  router
+  Vuex
+
 }).$mount('#root')

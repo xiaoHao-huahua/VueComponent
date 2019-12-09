@@ -9,7 +9,7 @@
 <body>
   
 <!--   <script src="https://cdn.bootcss.com/pubsub-js/1.7.0/pubsub.js"></script> -->
-  <script src="./pub-sub.js"></script>
+  <script src="./pubsub.js"></script>
   <script>
     /* 
     PubSub的语法:
@@ -22,25 +22,29 @@
     PubSub.subscribe('add', (msg, data) => {
       console.log('add1()', data)
     })
+    
 
     const token = PubSub.subscribe('add', (msg, data) => {
       console.log('add2()', data)
     })
 
-    console.log('token', token) // uid_1
+
     PubSub.subscribe('delete', (msg, data) => {
       console.log('delete()', data)
     })
-
+console.log(token);
     // PubSub.unsubscribe()
-    // PubSub.unsubscribe(token)
-    // PubSub.unsubscribe('add')1
+    PubSub.unsubscribe(token)
+    // PubSub.unsubscribe('add')
 
-    // PubSub.publish('add', 'atguigu')
-    PubSub.publishSync('add', 'atguigu')
-    console.log('publish()之后')
+
+
+    PubSub.publish('add', 'atguigu')
+    // PubSub.publishSync('add', 'atguigu')
+    // console.log('publish()之后')
     PubSub.publish('delete', 'baidu')
 
+   
     
   </script>
 </body>
