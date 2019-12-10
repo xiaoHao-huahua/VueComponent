@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
+
 <body>
-  
-<!--   <script src="https://cdn.bootcss.com/pubsub-js/1.7.0/pubsub.js"></script> -->
+
+  <!--   <script src="https://cdn.bootcss.com/pubsub-js/1.7.0/pubsub.js"></script> -->
   <script src="./pubsub.js"></script>
   <script>
     /* 
@@ -22,7 +24,7 @@
     PubSub.subscribe('add', (msg, data) => {
       console.log('add1()', data)
     })
-    
+
 
     const token = PubSub.subscribe('add', (msg, data) => {
       console.log('add2()', data)
@@ -32,7 +34,7 @@
     PubSub.subscribe('delete', (msg, data) => {
       console.log('delete()', data)
     })
-console.log(token);
+    console.log(token);
     // PubSub.unsubscribe()
     PubSub.unsubscribe(token)
     // PubSub.unsubscribe('add')
@@ -44,8 +46,15 @@ console.log(token);
     // console.log('publish()之后')
     PubSub.publish('delete', 'baidu')
 
-   
-    
+
+
+
+
+
+
+
+     
   </script>
 </body>
+
 </html>
